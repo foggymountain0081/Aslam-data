@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arshad Summary Report</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #5f6b7a;
+    --line: #e2e6ec; --accent: #1f6feb; --good: #1a7f37; --warn: #b35900; --head: #eef2f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11151b; --card: #1a2029; --text: #e6e9ee; --muted: #9aa5b3;
+      --line: #2c3440; --accent: #5aa0ff; --good: #4cc26a; --warn: #f0a04b; --head: #222a35;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #11151b; --card: #1a2029; --text: #e6e9ee; --muted: #9aa5b3;
+    --line: #2c3440; --accent: #5aa0ff; --good: #4cc26a; --warn: #f0a04b; --head: #222a35;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card);
+          border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; }
+  th { background: var(--head); font-weight: 600; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  tr.total td { font-weight: 700; background: var(--head); }
+  .main td:first-child { width: 70%; }
+  .main td.n { font-size: 1.15rem; font-weight: 700; }
+  .good { color: var(--good); } .warn { color: var(--warn); } .acc { color: var(--accent); }
+  .wrap { overflow-x: auto; }
+  ul { padding-left: 20px; color: var(--muted); }
+  li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>School Visit Summary – Arshad (Kozhikode)</h1>
+  <p class="sub">Visits logged 13 Aug – 24 Sep 2026 · Source: Arshad’s coverage report (25 Sep 2026)</p>
+
+  <h2>Final report</h2>
+  <table class="main">
+    <tr><th>Item</th><th class="n">Count</th></tr>
+    <tr><td>Total schools in Arshad’s areas</td><td class="n acc">359</td></tr>
+    <tr><td>Total schools covered (first visit done)</td><td class="n good">232</td></tr>
+    <tr><td>Total schools not yet covered (first visit pending)</td><td class="n warn">127</td></tr>
+    <tr><td>Total second visits (2nd visit month fixed)</td><td class="n">105</td></tr>
+    <tr><td>Total schools having a contact mobile number</td><td class="n good">301</td></tr>
+    <tr><td>Total schools not having a contact mobile number</td><td class="n warn">58</td></tr>
+    <tr><td>Total free passes issued</td><td class="n">5 <span style="font-weight:400;font-size:.85rem">(20 persons)</span></td></tr>
+    <tr><td>Total schools matched with Deepika’s data (visited schools)</td><td class="n acc">145 <span style="font-weight:400;font-size:.85rem">of 232</span></td></tr>
+  </table>
+
+  <h2>Area-wise breakdown</h2>
+  <div class="wrap">
+  <table>
+    <tr>
+      <th>Area</th><th class="n">Total schools</th><th class="n">Covered</th><th class="n">Not covered</th>
+      <th class="n">2nd visits</th><th class="n">With mobile</th><th class="n">No mobile</th>
+      <th class="n">Free passes</th><th class="n">Matched with Deepika</th>
+    </tr>
+    <tr><td>Kozhikode South</td><td class="n">119</td><td class="n">101</td><td class="n">18</td><td class="n">50</td><td class="n">108</td><td class="n">11</td><td class="n">2</td><td class="n">57</td></tr>
+    <tr><td>Kozhikode North</td><td class="n">79</td><td class="n">37</td><td class="n">42</td><td class="n">16</td><td class="n">60</td><td class="n">19</td><td class="n">1</td><td class="n">31</td></tr>
+    <tr><td>Beypore</td><td class="n">91</td><td class="n">46</td><td class="n">45</td><td class="n">26</td><td class="n">72</td><td class="n">19</td><td class="n">1</td><td class="n">27</td></tr>
+    <tr><td>Elathur</td><td class="n">30</td><td class="n">20</td><td class="n">10</td><td class="n">4</td><td class="n">26</td><td class="n">4</td><td class="n">0</td><td class="n">13</td></tr>
+    <tr><td>Kunnamangalam</td><td class="n">40</td><td class="n">28</td><td class="n">12</td><td class="n">9</td><td class="n">35</td><td class="n">5</td><td class="n">1</td><td class="n">17</td></tr>
+    <tr class="total"><td>Total</td><td class="n">359</td><td class="n">232</td><td class="n">127</td><td class="n">105</td><td class="n">301</td><td class="n">58</td><td class="n">5</td><td class="n">145</td></tr>
+  </table>
+  </div>
+
+  <h2>Second visits by month</h2>
+  <table>
+    <tr><th>Month</th><th class="n">Schools</th></tr>
+    <tr><td>September 2026 (due now)</td><td class="n">12</td></tr>
+    <tr><td>October 2026</td><td class="n">30</td></tr>
+    <tr><td>November 2026</td><td class="n">33</td></tr>
+    <tr><td>December 2026</td><td class="n">25</td></tr>
+    <tr><td>January 2027</td><td class="n">4</td></tr>
+    <tr><td>February 2027</td><td class="n">1</td></tr>
+    <tr class="total"><td>Total</td><td class="n">105</td></tr>
+  </table>
+
+  <h2>Free passes issued</h2>
+  <div class="wrap">
+  <table>
+    <tr><th>#</th><th>Area</th><th>School</th><th>Date</th><th class="n">Persons</th><th>Visited by Arshad?</th></tr>
+    <tr><td>1</td><td>Kunnamangalam</td><td>A. M. L. P. S. Arathilparamba</td><td>20/07/2026</td><td class="n">4</td><td>Yes</td></tr>
+    <tr><td>2</td><td>Kozhikode North</td><td>J. D. T. Islam A. L. P. S. Merikkunnu</td><td>04/09/2026</td><td class="n">4</td><td>No (first visit pending)</td></tr>
+    <tr><td>3</td><td>Beypore</td><td>Nallalam A. U. P. S.</td><td>17/09/2026</td><td class="n">2</td><td>Yes</td></tr>
+    <tr><td>4</td><td>Kozhikode South</td><td>G. V. H. S. S. Kinassery</td><td>19/09/2026</td><td class="n">5</td><td>Yes</td></tr>
+    <tr><td>5</td><td>Kozhikode South</td><td>Markaz E M School, Pokkunn</td><td>20/09/2026</td><td class="n">5</td><td>Yes</td></tr>
+    <tr class="total"><td></td><td colspan="3">Total</td><td class="n">20</td><td></td></tr>
+  </table>
+  </div>
+
+  <h2>Notes</h2>
+  <ul>
+    <li><b>Mobile numbers:</b> 301 = 230 visited schools with a 10‑digit mobile collected by Arshad + 71 pending schools with a mobile in the directory lists. 58 = 56 pending schools with only a landline or no number + 2 visited schools whose recorded number is short/invalid (Brilliant Anganwadi, Nainamvalapp and Ciesco Private ITI, Mukhadar).</li>
+    <li><b>Deepika match:</b> 145 of the 232 visited schools are in Deepika’s list. Deepika’s list has 257 schools in Arshad’s areas in total (88 of them with a mobile number).</li>
+    <li><b>Free passes:</b> 5 of the 84 free‑pass feedback entries belong to Arshad’s areas; the rest are other districts.</li>
+    <li>Schools with several sections (LP/UP/HS/HSS) are counted once; Arshad’s 264 visited units collapse to 232 schools.</li>
+  </ul>
+</main>
+</body>
+</html>
