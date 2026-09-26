@@ -1,0 +1,128 @@
+<title>Basheer Kozhikode Summary</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#F3F6F5; --surface:#FFFFFF; --ink:#15211E; --muted:#5A6B66; --line:#D9E2DF;
+  --accent:#0E7A5A; --accent-soft:#DDF0E8; --warn:#A95A0B; --warn-soft:#FBEBD8;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F1614; --surface:#172220; --ink:#E4ECE9; --muted:#9AAAA5; --line:#2A3834;
+    --accent:#4CC79C; --accent-soft:#1C3A30; --warn:#F0A55A; --warn-soft:#3A2A18;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F1614; --surface:#172220; --ink:#E4ECE9; --muted:#9AAAA5; --line:#2A3834;
+  --accent:#4CC79C; --accent-soft:#1C3A30; --warn:#F0A55A; --warn-soft:#3A2A18;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:32px 48px;display:grid;gap:32px}
+header{display:grid;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+h1{font:700 clamp(28px,5vw,40px)/1.1 var(--display);margin:0;text-wrap:balance}
+h2{font:600 22px/1.2 var(--display);margin:0 0 12px;text-wrap:balance}
+.sub{color:var(--muted);margin:0;max-width:65ch}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:2px;align-content:start}
+.kpi .n{font:700 38px/1 var(--display);font-variant-numeric:tabular-nums}
+.kpi .l{font-weight:600}
+.kpi .d{font-size:13px;color:var(--muted)}
+.kpi.good .n{color:var(--accent)}
+.kpi.warn .n{color:var(--warn)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stack{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--line);margin:8px 0 10px}
+.stack .a{background:var(--accent)} .stack .b{background:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.months{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;align-items:end;margin-top:8px}
+.m{display:grid;gap:4px;text-align:center;font-size:13px}
+.m .bar-wrap{height:110px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line)}
+.m .bar{width:100%;background:var(--accent);border-radius:4px 4px 0 0;min-height:2px}
+.m b{font-variant-numeric:tabular-nums} .m span{color:var(--muted)}
+.table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:760px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+thead th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;vertical-align:bottom;white-space:normal}
+tbody th{text-align:left;font-weight:600}
+tr.muted-row th,tr.muted-row td{color:var(--muted);font-weight:400}
+tfoot th,tfoot td{font-weight:700;border-bottom:0;background:var(--accent-soft)}
+tfoot th{text-align:left}
+.cov{display:grid;grid-template-columns:28px 70px 36px;gap:8px;align-items:center;justify-content:end}
+.cov i{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--accent) var(--p),var(--line) var(--p))}
+.cov em{font-style:normal;color:var(--muted);font-size:13px}
+.notes{color:var(--muted);font-size:13.5px;margin:0;padding-left:18px;display:grid;gap:4px;max-width:80ch}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">School visit report · Kozhikode</div>
+    <h1>Basheer – final summary</h1>
+    <p class="sub">Visits from 23 Jun to 23 Sep 2026, checked against Deepika's Kozhikode list, the Kozhikode School Data, the CBSE/ICSE list and the Free Pass sheet. Source: Basheer report, prepared 25 Sep 2026.</p>
+  </header>
+
+  <section class="kpis" aria-label="Key figures">
+    <div class="kpi"><span class="n">751</span><span class="l">Total schools</span><span class="d">In Basheer's 8 assembly areas</span></div>
+    <div class="kpi good"><span class="n">166</span><span class="l">Schools covered</span><span class="d">150 visited + 16 through a free pass only</span></div>
+    <div class="kpi warn"><span class="n">585</span><span class="l">Not yet covered</span><span class="d">No visit and no free pass yet</span></div>
+    <div class="kpi"><span class="n">215</span><span class="l">Second visits</span><span class="d">Schools with a 2nd-visit month fixed</span></div>
+    <div class="kpi good"><span class="n">333</span><span class="l">With mobile number</span><span class="d">Of the 751 schools</span></div>
+    <div class="kpi warn"><span class="n">418</span><span class="l">Without mobile number</span><span class="d">Landline only or no number</span></div>
+    <div class="kpi"><span class="n">34</span><span class="l">Free passes issued</span><span class="d">From the Free Pass feedback sheet</span></div>
+    <div class="kpi"><span class="n">184</span><span class="l">Matched with Deepika's list</span><span class="d">Of Basheer's visit entries (208 matched to any list)</span></div>
+  </section>
+
+  <section class="split">
+    <div class="panel">
+      <h2>Coverage</h2>
+      <div class="stack" role="img" aria-label="166 covered, 585 not covered"><div class="a" style="width:22.1%"></div><div class="b" style="width:77.9%"></div></div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Covered 166 (22%)</span><span><i style="background:var(--warn)"></i>Not covered 585 (78%)</span></div>
+      <p class="sub" style="margin-top:12px;font-size:13.5px">Of the 585 not covered, 249 have a mobile number and can be called first. The other 336 have no mobile number.</p>
+      <div class="stack" role="img" aria-label="333 with mobile, 418 without"><div class="a" style="width:44.3%"></div><div class="b" style="width:55.7%"></div></div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>With mobile 333 (44%)</span><span><i style="background:var(--warn)"></i>Without mobile 418 (56%)</span></div>
+    </div>
+    <div class="panel">
+      <h2>Second visits by month</h2>
+      <div class="months"><div class="m"><div class="bar-wrap"><div class="bar" style="height:36.5%"></div></div><b>23</b><span>Sep</span></div><div class="m"><div class="bar-wrap"><div class="bar" style="height:49.2%"></div></div><b>31</b><span>Oct</span></div><div class="m"><div class="bar-wrap"><div class="bar" style="height:100.0%"></div></div><b>63</b><span>Nov</span></div><div class="m"><div class="bar-wrap"><div class="bar" style="height:93.7%"></div></div><b>59</b><span>Dec</span></div><div class="m"><div class="bar-wrap"><div class="bar" style="height:50.8%"></div></div><b>32</b><span>Jan</span></div><div class="m"><div class="bar-wrap"><div class="bar" style="height:6.3%"></div></div><b>4</b><span>Feb</span></div><div class="m"><div class="bar-wrap"><div class="bar" style="height:4.8%"></div></div><b>3</b><span>Mar</span></div></div>
+      <p class="sub" style="margin-top:12px;font-size:13.5px">215 schools in total. November and December are the busiest months.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Area-wise breakdown</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="text-align:left">Area (assembly)</th><th>Total schools</th><th>Covered</th><th>Not covered</th><th>With mobile</th><th>Without mobile</th><th>2nd visits</th><th>Free pass</th><th>Visit entries</th></tr></thead>
+        <tbody>
+<tr><th scope="row">Koduvally</th><td>96</td><td><div class="cov"><span>31</span><i style="--p:32%"></i><em>32%</em></div></td><td>65</td><td>30</td><td>66</td><td>62</td><td>6</td><td>151</td></tr>
+<tr><th scope="row">Kunnamangalam</th><td>102</td><td><div class="cov"><span>45</span><i style="--p:44%"></i><em>44%</em></div></td><td>57</td><td>55</td><td>47</td><td>50</td><td>3</td><td>147</td></tr>
+<tr><th scope="row">Thiruvambadi</th><td>105</td><td><div class="cov"><span>26</span><i style="--p:25%"></i><em>25%</em></div></td><td>79</td><td>41</td><td>64</td><td>49</td><td>4</td><td>105</td></tr>
+<tr><th scope="row">Elathur</th><td>101</td><td><div class="cov"><span>19</span><i style="--p:19%"></i><em>19%</em></div></td><td>82</td><td>53</td><td>48</td><td>9</td><td>8</td><td>45</td></tr>
+<tr><th scope="row">Kozhikode North</th><td>82</td><td><div class="cov"><span>11</span><i style="--p:13%"></i><em>13%</em></div></td><td>71</td><td>41</td><td>41</td><td>10</td><td>3</td><td>40</td></tr>
+<tr><th scope="row">Beypore</th><td>71</td><td><div class="cov"><span>13</span><i style="--p:18%"></i><em>18%</em></div></td><td>58</td><td>34</td><td>37</td><td>19</td><td>0</td><td>39</td></tr>
+<tr><th scope="row">Balusseri</th><td>119</td><td><div class="cov"><span>18</span><i style="--p:15%"></i><em>15%</em></div></td><td>101</td><td>58</td><td>61</td><td>12</td><td>10</td><td>24</td></tr>
+<tr><th scope="row">Kozhikode South</th><td>75</td><td><div class="cov"><span>3</span><i style="--p:4%"></i><em>4%</em></div></td><td>72</td><td>21</td><td>54</td><td>4</td><td>0</td><td>12</td></tr>
+<tr class="muted-row"><th scope="row">Malappuram (outside Kozhikode)</th><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>0</td><td>0</td><td>8</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">Total</th><td>751</td><td>166</td><td>585</td><td>333</td><td>418</td><td>215</td><td>34</td><td>571</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <ul class="notes">
+    <li>Basheer logged 571 visit entries. 363 of them are pre-primary schools, anganwadis or colleges that are not in any school list, so they don't count toward the 751 listed schools.</li>
+    <li>Covered means Basheer visited the school or gave it a free pass. Of the 166 covered schools, 150 were visited and 16 got a free pass only.</li>
+    <li>Only 10-digit numbers starting with 6, 7, 8 or 9 count as mobile numbers. Numbers starting with 0495 or 0496 are school landlines.</li>
+    <li>Deepika's list has 1,282 schools, and 684 of them fall in Basheer's areas. 184 of Basheer's entries match a school in her list.</li>
+    <li>Kozhikode North and Kozhikode South were only partly toured, so most of their schools are still pending.</li>
+  </ul>
+</div>
