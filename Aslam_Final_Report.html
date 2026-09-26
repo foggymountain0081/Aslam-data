@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aslam Final Report</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #5d6677;
+    --line: #dde1e7; --accent: #1f6feb; --good: #1a7f37; --warn: #b35900; --head: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151a; --card: #1b2028; --text: #e6e9ee; --muted: #9aa3b2;
+      --line: #2c333e; --accent: #5aa2ff; --good: #4ac26b; --warn: #f0a04b; --head: #222833;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12151a; --card: #1b2028; --text: #e6e9ee; --muted: #9aa3b2;
+    --line: #2c333e; --accent: #5aa2ff; --good: #4ac26b; --warn: #f0a04b; --head: #222833;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 12px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .num { font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .lbl { font-weight: 600; }
+  .note { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+  .good .num { color: var(--good); } .warn .num { color: var(--warn); } .blue .num { color: var(--accent); }
+  .scroll { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; min-width: 760px; font-variant-numeric: tabular-nums; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  th { background: var(--head); font-size: 0.85rem; }
+  tr.total td { font-weight: 700; background: var(--head); }
+  ul { padding-left: 20px; } li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Aslam – Final Report</h1>
+  <p class="sub">Malappuram district · Visits 22.06.2026 to 23.09.2026 · Source: Aslam School Visit Verification Report (25 Sept 2026)</p>
+
+  <div class="grid">
+    <div class="card blue"><div class="num">1,025</div><div class="lbl">Total schools in Aslam's areas</div><div class="note">745 State + 36 CBSE/ICSE + 244 found only in Aslam's log</div></div>
+    <div class="card good"><div class="num">392</div><div class="lbl">Schools covered (visited)</div><div class="note">From 441 visit entries; repeat visits counted once</div></div>
+    <div class="card warn"><div class="num">634</div><div class="lbl">Schools not yet covered</div><div class="note">Pending first visit</div></div>
+    <div class="card"><div class="num">119</div><div class="lbl">Total second visits</div><div class="note">43 already done + 76 planned (14 due now in Sept)</div></div>
+    <div class="card good"><div class="num">680</div><div class="lbl">Schools with a contact mobile no.</div><div class="note">388 visited + 292 pending</div></div>
+    <div class="card warn"><div class="num">346</div><div class="lbl">Schools without a mobile no.</div><div class="note">4 visited (landline only) + 342 pending</div></div>
+    <div class="card"><div class="num">3</div><div class="lbl">Free passes issued (Aslam's areas)</div><div class="note">Out of 83 entries in the whole free stay-pass register</div></div>
+    <div class="card blue"><div class="num">737</div><div class="lbl">Schools matched with Deepika's data</div><div class="note">137 visited + 600 pending</div></div>
+  </div>
+
+  <h2>Area-wise breakdown</h2>
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Area</th><th>Total schools</th><th>Covered</th><th>Not covered</th><th>2nd visit done</th><th>2nd visit planned</th><th>With mobile</th><th>No mobile</th><th>Free pass</th><th>Matched with Deepika</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Tanur</td><td>129</td><td>88</td><td>41</td><td>10</td><td>15</td><td>104</td><td>25</td><td>1</td><td>72</td></tr>
+      <tr><td>Tirur</td><td>176</td><td>86</td><td>90</td><td>10</td><td>17</td><td>133</td><td>43</td><td>1</td><td>123</td></tr>
+      <tr><td>Tirurangadi</td><td>142</td><td>85</td><td>57</td><td>16</td><td>17</td><td>106</td><td>36</td><td>1</td><td>80</td></tr>
+      <tr><td>Tavanur</td><td>125</td><td>35</td><td>90</td><td>4</td><td>7</td><td>81</td><td>44</td><td>0</td><td>97</td></tr>
+      <tr><td>Vallikunnu</td><td>102</td><td>30</td><td>72</td><td>1</td><td>5</td><td>57</td><td>45</td><td>0</td><td>77</td></tr>
+      <tr><td>Kottakkal</td><td>139</td><td>25</td><td>114</td><td>0</td><td>5</td><td>87</td><td>52</td><td>0</td><td>112</td></tr>
+      <tr><td>Ponnani</td><td>120</td><td>23</td><td>97</td><td>2</td><td>6</td><td>63</td><td>57</td><td>0</td><td>99</td></tr>
+      <tr><td>Vengara</td><td>92</td><td>19</td><td>73</td><td>0</td><td>4</td><td>48</td><td>44</td><td>0</td><td>76</td></tr>
+      <tr><td>Other*</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+      <tr class="total"><td>TOTAL</td><td>1,025</td><td>392</td><td>634</td><td>43</td><td>76</td><td>680</td><td>346</td><td>3</td><td>737</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>*One school Aslam visited is outside his 8 areas ("Other"), so covered + not covered = 1,026 rather than 1,025.</li>
+    <li>Mobile numbers are 10-digit numbers starting 6–9; landlines are not counted as mobile.</li>
+    <li>Deepika's full Malappuram list has 1,579 schools. Of the 272 Deepika entries with mobile numbers in Aslam's areas, 60 have been visited by Aslam.</li>
+    <li>Matching was done by phone number first, then by school type and place name (allowing spelling variants).</li>
+  </ul>
+</main>
+</body>
+</html>
