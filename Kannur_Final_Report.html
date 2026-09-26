@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kannur Final Report</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --text:#1d2330; --muted:#5f6b7a; --line:#dde2e8; --accent:#1f6feb; --ok:#1a7f37; --warn:#b35900; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#12151a; --card:#1b1f26; --text:#e6e9ee; --muted:#9aa4b1; --line:#2c323c; --accent:#58a6ff; --ok:#3fb950; --warn:#e3a14f; }
+  }
+  :root[data-theme="dark"] { --bg:#12151a; --card:#1b1f26; --text:#e6e9ee; --muted:#9aa4b1; --line:#2c323c; --accent:#58a6ff; --ok:#3fb950; --warn:#e3a14f; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:900px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  h2 { font-size:17px; margin:32px 0 10px; }
+  .sub { color:var(--muted); margin:0 0 20px; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th, td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:left; }
+  th { font-size:13px; color:var(--muted); font-weight:600; }
+  td.n, th.n { text-align:right; font-variant-numeric:tabular-nums; }
+  tr:last-child td { border-bottom:0; }
+  tr.total td { font-weight:700; background:color-mix(in srgb, var(--accent) 8%, transparent); }
+  .main-table td:first-child { width:60%; }
+  .main-table td.n { font-size:18px; font-weight:700; }
+  .note { color:var(--muted); font-size:13px; }
+  .scroll { overflow-x:auto; }
+  ul { padding-left:20px; }
+  li { margin:4px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Kannur – Final Report</h1>
+  <p class="sub">Executives: Biju Thomas &amp; Muhammed · Visit period 14.08.2026 – 23.09.2026 · Source: Kannur School Visit &amp; Coverage Report (25 Sep 2026)</p>
+
+  <h2>Summary</h2>
+  <table class="main-table">
+    <tr><th>Item</th><th class="n">Count</th></tr>
+    <tr><td>Total schools in executive areas (5 areas)</td><td class="n">757</td></tr>
+    <tr><td>Total schools covered (1st visit done)</td><td class="n">145</td></tr>
+    <tr><td>Total schools not yet covered</td><td class="n">612</td></tr>
+    <tr><td>Total second visits<br><span class="note">40 with month fixed + 87 follow-up / retry</span></td><td class="n">127</td></tr>
+    <tr><td>Total schools having contact mobile numbers<br><span class="note">145 visited + 270 not yet visited</span></td><td class="n">415</td></tr>
+    <tr><td>Total schools not having contact mobile numbers<br><span class="note">all are not-yet-visited schools</span></td><td class="n">342</td></tr>
+    <tr><td>Total free passes issued</td><td class="n">0</td></tr>
+    <tr><td>Total schools matched with Deepika's data<br><span class="note">visited schools found in Deepika's list</span></td><td class="n">67</td></tr>
+  </table>
+
+  <h2>Area-wise breakdown</h2>
+  <div class="scroll">
+  <table>
+    <tr>
+      <th>Area</th><th class="n">Total schools</th><th class="n">Covered</th><th class="n">Not covered</th>
+      <th class="n">2nd visits</th><th class="n">With mobile</th><th class="n">Without mobile</th><th class="n">Deepika match</th>
+    </tr>
+    <tr><td>Taliparamba</td><td class="n">179</td><td class="n">41</td><td class="n">138</td><td class="n">35</td><td class="n">114</td><td class="n">65</td><td class="n">21</td></tr>
+    <tr><td>Irikkur (Alakode–Naduvil)</td><td class="n">204</td><td class="n">39</td><td class="n">165</td><td class="n">33</td><td class="n">119</td><td class="n">85</td><td class="n">28</td></tr>
+    <tr><td>Payyannur</td><td class="n">122</td><td class="n">16</td><td class="n">106</td><td class="n">15</td><td class="n">42</td><td class="n">80</td><td class="n">6</td></tr>
+    <tr><td>Kannur Town</td><td class="n">153</td><td class="n">37</td><td class="n">116</td><td class="n">33</td><td class="n">87</td><td class="n">66</td><td class="n">9</td></tr>
+    <tr><td>Azhikode</td><td class="n">99</td><td class="n">12</td><td class="n">87</td><td class="n">11</td><td class="n">53</td><td class="n">46</td><td class="n">3</td></tr>
+    <tr class="total"><td>Grand total</td><td class="n">757</td><td class="n">145</td><td class="n">612</td><td class="n">127</td><td class="n">415</td><td class="n">342</td><td class="n">67</td></tr>
+  </table>
+  </div>
+
+  <h2>Notes</h2>
+  <ul class="note">
+    <li><b>Mobile numbers:</b> every one of the 145 visited schools has a 10-digit mobile number. Of the 612 schools not yet visited, 270 have a mobile number and 342 do not (landline only or no number).</li>
+    <li><b>Free passes:</b> 82 free-stay-pass feedback entries were checked (Interested 38, Neutral 27, Not interested 2, blank 15). None of them match a Kannur school, so no free pass is recorded for Kannur.</li>
+    <li><b>Deepika's data:</b> 67 of the 145 visited schools appear in Deepika's list. Separately, Deepika's list holds 164 mobile numbers for schools in these areas (39 visited, 125 not yet visited).</li>
+    <li><b>Second visits:</b> 40 schools gave a tour month; 87 need a follow-up call or a retry because the call didn't connect, the number was wrong, or no month was given.</li>
+  </ul>
+</main>
+</body>
+</html>
