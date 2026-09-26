@@ -24,7 +24,15 @@
   .area tr:last-child td { font-weight:700; background:#eef1f5; }
   ul { padding-left:20px; margin:8px 0; } li { margin:4px 0; }
   .note { color:var(--muted); font-size:13px; }
-  @media print { body { background:#fff; } }
+  @media print {
+    body { background:#fff; }
+    main { max-width:none; padding:0; }
+    .wrap { overflow:visible; }
+    .area th, .area td { padding:6px 7px; font-size:12.5px; }
+    h2 { break-after:avoid; }
+    table { break-inside:auto; } tr { break-inside:avoid; }
+  }
+  @page { size:A4; margin:14mm; }
 </style>
 </head>
 <body>
