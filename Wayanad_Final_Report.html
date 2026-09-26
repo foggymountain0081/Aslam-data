@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wayanad School Coverage</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #5d6675;
+    --line: #dde1e7; --accent: #1f6feb; --good: #1a7f37; --warn: #b35900; --head: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151b; --card: #1b1f27; --text: #e6e9ef; --muted: #9aa3b2;
+      --line: #2e3440; --accent: #6ea8ff; --good: #4cc27a; --warn: #f0a04b; --head: #232833;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 12px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card .num { font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .card .lbl { color: var(--muted); font-size: .9rem; }
+  .card .note { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+  .good .num { color: var(--good); } .warn .num { color: var(--warn); } .acc .num { color: var(--accent); }
+  .tbl { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; min-width: 640px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: right; font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; }
+  th { background: var(--head); font-size: .85rem; }
+  tr.total td { font-weight: 700; background: var(--head); border-bottom: 0; }
+  ul { padding-left: 20px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Wayanad – School Coverage Final Report</h1>
+  <p class="sub">Source: Executive Visit &amp; School Coverage Report – Wayanad (25 September 2026)</p>
+
+  <h2>Key numbers</h2>
+  <div class="grid">
+    <div class="card acc"><div class="num">348</div><div class="lbl">Total schools in Wayanad executive areas</div></div>
+    <div class="card good"><div class="num">143</div><div class="lbl">Schools covered (1st visit done)</div></div>
+    <div class="card warn"><div class="num">205</div><div class="lbl">Schools not yet covered</div>
+      <div class="note">36 pending in toured localities + 169 in localities not toured yet</div></div>
+    <div class="card acc"><div class="num">157</div><div class="lbl">Total second visits scheduled</div></div>
+    <div class="card good"><div class="num">189</div><div class="lbl">Schools with contact mobile number</div></div>
+    <div class="card warn"><div class="num">159</div><div class="lbl">Schools without contact mobile number</div>
+      <div class="note">Landline only or no number</div></div>
+    <div class="card acc"><div class="num">1</div><div class="lbl">Free passes issued</div>
+      <div class="note">A U P S Vellamunda (Mananthavady), 4 persons</div></div>
+    <div class="card good"><div class="num">315</div><div class="lbl">Schools matched with Deepika's data</div>
+      <div class="note">123 of these have been visited</div></div>
+  </div>
+
+  <h2>Area-wise breakdown</h2>
+  <div class="tbl">
+    <table>
+      <thead>
+        <tr>
+          <th>Area</th><th>Total schools</th><th>Covered</th><th>Not covered</th>
+          <th>2nd visits</th><th>With mobile</th><th>No mobile</th><th>Free pass</th><th>Matched with Deepika</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Kalpetta</td><td>96</td><td>42</td><td>54</td><td>48</td><td>52</td><td>44</td><td>0</td><td>87</td></tr>
+        <tr><td>Mananthavady</td><td>105</td><td>80</td><td>25</td><td>90</td><td>87</td><td>18</td><td>1</td><td>96</td></tr>
+        <tr><td>Panamaram</td><td>68</td><td>5</td><td>63</td><td>6</td><td>21</td><td>47</td><td>0</td><td>62</td></tr>
+        <tr><td>Sulthan Bathery</td><td>79</td><td>16</td><td>63</td><td>13</td><td>29</td><td>50</td><td>0</td><td>70</td></tr>
+        <tr class="total"><td>TOTAL</td><td>348</td><td>143</td><td>205</td><td>157</td><td>189</td><td>159</td><td>1</td><td>315</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Second visits by month</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Month</th><th>Kalpetta</th><th>Mananthavady</th><th>Panamaram</th><th>Sulthan Bathery</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td>September 2026</td><td>11</td><td>22</td><td>3</td><td>6</td><td>42</td></tr>
+        <tr><td>October 2026</td><td>14</td><td>13</td><td>0</td><td>5</td><td>32</td></tr>
+        <tr><td>November 2026</td><td>9</td><td>22</td><td>2</td><td>0</td><td>33</td></tr>
+        <tr><td>December 2026</td><td>5</td><td>18</td><td>1</td><td>1</td><td>25</td></tr>
+        <tr><td>January 2027</td><td>1</td><td>5</td><td>0</td><td>0</td><td>6</td></tr>
+        <tr><td>February 2027</td><td>8</td><td>9</td><td>0</td><td>1</td><td>18</td></tr>
+        <tr><td>March 2027</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+        <tr class="total"><td>TOTAL</td><td>48</td><td>90</td><td>6</td><td>13</td><td>157</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>Total schools = 348 unique directory schools (State Syllabus + Deepika + CBSE/ICSE, each counted once).</li>
+    <li>Not covered = schools with no first visit yet: 36 in localities already toured (27 of them have no mobile number) and 169 in localities not toured yet.</li>
+    <li>An additional 151 institutions (anganwadis, colleges, pre-schools, private schools) were visited but are not in any directory, so they are not included above.</li>
+    <li>"With mobile" = a 10-digit mobile number is available from the visit log or the directory. "No mobile" = only an office landline or no number.</li>
+    <li>Free pass: only 1 of the 84 feedback rows is a Wayanad school from this visit log. The visit log also mentions Polytechnic College, Meenangadi "visited with free pass", but it is not in the feedback sheet.</li>
+    <li>Deepika's data: 315 schools, of which 44 have a mobile number and 5 match the number the executive logged.</li>
+  </ul>
+</main>
+</body>
+</html>
