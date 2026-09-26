@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kasaragod Coverage Report</title>
+<style>
+:root { --bg:#fff; --fg:#1d2433; --mute:#5b6475; --line:#e3e7ee; --card:#f5f7fb; --accent:#1f5fbf; --warn:#b4541a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#12161f; --fg:#e6e9ef; --mute:#9aa3b5; --line:#2a3242; --card:#1a2030; --accent:#6ea2f5; --warn:#f0a36b; } }
+:root[data-theme="dark"] { --bg:#12161f; --fg:#e6e9ef; --mute:#9aa3b5; --line:#2a3242; --card:#1a2030; --accent:#6ea2f5; --warn:#f0a36b; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:1000px; margin:0 auto; padding:28px 16px 48px; }
+h1 { font-size:24px; margin:0 0 4px; }
+h2 { font-size:17px; margin:32px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+.meta { color:var(--mute); margin:0 0 20px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px; }
+.card .num { font-size:30px; font-weight:700; color:var(--accent); line-height:1.1; }
+.card.muted .num { color:var(--mute); }
+.card .lbl { font-weight:600; margin-top:4px; }
+.card .sub { color:var(--mute); font-size:12px; }
+.note { background:var(--card); border-left:4px solid var(--warn); padding:10px 14px; border-radius:6px; margin:14px 0; font-size:13px; }
+.wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { background:var(--card); font-weight:600; white-space:nowrap; }
+td:first-child { color:var(--mute); }
+.num-cols td:not(:first-child), .num-cols th:not(:first-child) { text-align:right; }
+.num-cols td:first-child { color:var(--fg); }
+.dup, .ll { font-size:11px; padding:1px 6px; border-radius:8px; background:var(--line); color:var(--mute); white-space:nowrap; }
+.ll { color:var(--warn); }
+.bars { max-width:520px; }
+.bar { display:grid; grid-template-columns:90px 1fr 32px; align-items:center; gap:8px; margin:4px 0; }
+.track { background:var(--card); border:1px solid var(--line); height:14px; border-radius:7px; overflow:hidden; }
+.fill { background:var(--accent); height:100%; }
+.bar b { text-align:right; }
+.two { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media (max-width:700px) { .two { grid-template-columns:1fr; } }
+@media print {
+  :root { --bg:#fff; --fg:#1d2433; --mute:#5b6475; --line:#dfe3ea; --card:#f3f5f9; --accent:#1f5fbf; --warn:#b4541a; }
+  main { padding:0; max-width:none; }
+  .cards { grid-template-columns:repeat(4,1fr); }
+  h2 { break-after:avoid; }
+  tr { break-inside:avoid; }
+  .card { break-inside:avoid; }
+}
+@page { size:A4; margin:14mm 12mm; }
+</style></head>
+<body><main>
+<h1>Kasaragod District – Final School Coverage Report</h1>
+<p class="meta">Executives: Emmanuel &amp; Shibili · Visit period: 13 Jul – 21 Aug 2026 · 56 areas</p>
+
+<h2>Summary</h2>
+<div class="cards"><div class="card"><div class="num">56</div><div class="lbl">Areas visited</div><div class="sub">by Emmanuel &amp; Shibili</div></div>
+<div class="card"><div class="num">106</div><div class="lbl">Total schools in executive areas</div><div class="sub">covered + not yet covered</div></div>
+<div class="card"><div class="num">63</div><div class="lbl">Schools covered</div><div class="sub">1st visit done</div></div>
+<div class="card"><div class="num">43</div><div class="lbl">Schools not yet covered</div><div class="sub">48 rows in source; 5 repeat across areas</div></div>
+<div class="card"><div class="num">63</div><div class="lbl">Second visits due</div><div class="sub">Emmanuel 56 · Shibili 7</div></div>
+<div class="card"><div class="num">96</div><div class="lbl">Schools with mobile number</div><div class="sub">90% of all schools</div></div>
+<div class="card"><div class="num">10</div><div class="lbl">Schools without mobile number</div><div class="sub">landline only (04xxx)</div></div>
+<div class="card muted"><div class="num">—</div><div class="lbl">Free passes issued</div><div class="sub">not recorded in the source data</div></div></div>
+<div class="note"><b>Free passes:</b> the source report has no free-pass column or figure, so this count cannot be
+calculated from it. Share the free-pass log and it can be added.</div>
+<div class="note"><b>How the counts work:</b> “covered” = schools already visited once (all are due a second visit).
+“Not yet covered” = registered schools in the same areas with no visit yet. 5 pending entries
+appear under more than one area in the source and are counted once: Amrita Vidyalayam-Kanhangad (Balla, Kanhangad); Christ CMI Public School (Balla) (Balla, Kanhangad); Essa English School (Kumbala, Mogral, Mogral Puthur); M E S Kunil School (Kumbala, Shiriya).
+A number is treated as a mobile number when it is 10 digits starting with 6–9; the rest are landlines.</div>
+
+<div class="two">
+<div><h2>Second visits by month</h2><div class="bars"><div class="bar"><span>August</span><div class="track"><div class="fill" style="width:4%"></div></div><b>1</b></div><div class="bar"><span>September</span><div class="track"><div class="fill" style="width:65%"></div></div><b>15</b></div><div class="bar"><span>October</span><div class="track"><div class="fill" style="width:100%"></div></div><b>23</b></div><div class="bar"><span>November</span><div class="track"><div class="fill" style="width:65%"></div></div><b>15</b></div><div class="bar"><span>December</span><div class="track"><div class="fill" style="width:39%"></div></div><b>9</b></div></div>
+<p class="meta" style="font-size:12px">Where two months were given, the first is used.</p></div>
+<div><h2>Schools by type</h2><div class="wrap"><table class="num-cols">
+<tr><th>Type</th><th>Schools</th></tr>
+<tr><td>Govt</td><td>39</td></tr>
+<tr><td>CBSE</td><td>25</td></tr>
+<tr><td>Aided</td><td>21</td></tr>
+<tr><td>Private</td><td>15</td></tr>
+<tr><td>Unaided Recognised</td><td>6</td></tr>
+</table></div></div>
+</div>
+
+<h2>Area-wise summary</h2>
+<div class="wrap"><table class="num-cols">
+<tr><th>Area</th><th>Covered</th><th>Not covered</th><th>Total</th><th>Mobile</th><th>No mobile</th></tr>
+<tr><td>Adkathbail</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Alampady</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Ambalathara</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Angadimoger</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Anjanur</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Attenganam</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Badoor</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>Balla</td><td>1</td><td>2</td><td>3</td><td>3</td><td>–</td></tr>
+<tr><td>Bela</td><td>0</td><td>1</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Bellikoth</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Bendichal</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Bovikkanam</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Chandragiri</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Chayoth</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Chemnad</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>Chithari</td><td>0</td><td>1</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Ichlampady</td><td>1</td><td>1</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Iriya</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Iriyanni</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Kadambar</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Kalladakutty</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Kambar</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Kanhangad</td><td>1</td><td>7</td><td>8</td><td>8</td><td>–</td></tr>
+<tr><td>Kasaragod</td><td>9</td><td>0</td><td>9</td><td>9</td><td>–</td></tr>
+<tr><td>Kayyur</td><td>3</td><td>0</td><td>3</td><td>3</td><td>–</td></tr>
+<tr><td>Kodiyamma</td><td>1</td><td>1</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Koliyadukkam</td><td>1</td><td>1</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Kudlu</td><td>0</td><td>3</td><td>3</td><td>3</td><td>–</td></tr>
+<tr><td>Kumbala</td><td>3</td><td>3</td><td>6</td><td>6</td><td>–</td></tr>
+<tr><td>Kuniya</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Kunjar</td><td>0</td><td>1</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Kuttikkol</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>Madikai</td><td>2</td><td>0</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Manjeshwar</td><td>1</td><td>6</td><td>7</td><td>4</td><td>3</td></tr>
+<tr><td>Melankott</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Mogral</td><td>2</td><td>0</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Mogral Puthur</td><td>0</td><td>0</td><td>0</td><td>0</td><td>–</td></tr>
+<tr><td>Munnad</td><td>2</td><td>0</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Naimarmoola</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>Neerchal</td><td>2</td><td>0</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Nellikkatta</td><td>0</td><td>1</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Nellikunnu</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Paivalike</td><td>1</td><td>1</td><td>2</td><td>2</td><td>–</td></tr>
+<tr><td>Panarkkulam</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Panayal</td><td>0</td><td>1</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Perdala</td><td>0</td><td>3</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td>Perumbala</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Poinachi</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Puthige</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>Rajapuram</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Shiribagilu</td><td>3</td><td>2</td><td>5</td><td>5</td><td>–</td></tr>
+<tr><td>Shiriya</td><td>0</td><td>0</td><td>0</td><td>0</td><td>–</td></tr>
+<tr><td>Thalangara</td><td>2</td><td>1</td><td>3</td><td>3</td><td>–</td></tr>
+<tr><td>Theruvath</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Udma</td><td>1</td><td>0</td><td>1</td><td>1</td><td>–</td></tr>
+<tr><td>Uppala</td><td>0</td><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td><b>Total</b></td><td><b>63</b></td><td><b>43</b></td><td><b>106</b></td><td><b>96</b></td><td><b>10</b></td></tr>
+</table></div>
+<p class="meta" style="font-size:12px">A 0 under “Not covered” for an area such as Mogral Puthur or Shiriya means its pending
+school is already counted under another area (see note above).</p>
+
+<h2>Covered schools – second visit due (63)</h2>
+<div class="wrap"><table>
+<tr><th>#</th><th>Area</th><th>School</th><th>Type</th><th>Contact</th><th>Executive</th><th>2nd visit</th></tr>
+<tr><td>1</td><td>Adkathbail</td><td>GUPS Adkathbail</td><td>Govt</td><td>9037159419</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>2</td><td>Alampady</td><td>GHSS High School</td><td>Govt</td><td>9809801601</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>3</td><td>Ambalathara</td><td>GVHSS Ambalathara High School</td><td>Govt</td><td>9846024308</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>4</td><td>Angadimoger</td><td>GHSS Angadimoger High School</td><td>Govt</td><td>9447407113</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>5</td><td>Anjanur</td><td>KHM English Medium School</td><td>Aided</td><td>8606378686</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>6</td><td>Attenganam</td><td>GHSS Attenganam Higher Secondary School</td><td>Govt</td><td>9400209594</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>7</td><td>Balla</td><td>GHSS Balla East High School</td><td>Govt</td><td>9400485128</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>8</td><td>Bellikoth</td><td>Sree Kurumba English Medium School</td><td>Private</td><td>9947518527</td><td>Emmanuel</td><td>December</td></tr>
+<tr><td>9</td><td>Bendichal</td><td>GUP School</td><td>Govt</td><td>9544213938</td><td>Emmanuel</td><td>December</td></tr>
+<tr><td>10</td><td>Bovikkanam</td><td>Bar HSS Bovikkanam High School</td><td>Aided</td><td>9846201401</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>11</td><td>Chandragiri</td><td>GHSS Chandragiri Higher Secondary</td><td>Govt</td><td>9495718362</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>12</td><td>Chayoth</td><td>Mother Alexia English Medium School</td><td>Private</td><td>9109465678</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>13</td><td>Chemnad</td><td>GHSS Chemnad High School</td><td>Govt</td><td>9495795061</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>14</td><td>Ichlampady</td><td>Ichlampady Senior Basic School</td><td>Aided</td><td>9446845067</td><td>Emmanuel</td><td>December</td></tr>
+<tr><td>15</td><td>Iriya</td><td>GHS Iriya</td><td>Govt</td><td>9495145709</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>16</td><td>Iriyanni</td><td>GVHSS Iriyanni Higher Secondary</td><td>Govt</td><td>9447321811</td><td>Emmanuel</td><td>August end</td></tr>
+<tr><td>17</td><td>Kadambar</td><td>Govt High School Kadambar</td><td>Govt</td><td>7907910514</td><td>Shibili</td><td>December</td></tr>
+<tr><td>18</td><td>Kalladakutty</td><td>Jama Ath English Medium School</td><td>Private</td><td>8921545081</td><td>Emmanuel</td><td>December</td></tr>
+<tr><td>19</td><td>Kambar</td><td>GLP School</td><td>Govt</td><td>9446681230</td><td>Emmanuel</td><td>November, December</td></tr>
+<tr><td>20</td><td>Kanhangad</td><td>Crescent English School</td><td>Private</td><td>9633445700</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>21</td><td>Kasaragod</td><td>GMRHSS For Girls</td><td>Govt</td><td>9961072938</td><td>Emmanuel</td><td>November, December</td></tr>
+<tr><td>22</td><td>Kasaragod</td><td>Govt Technical High School</td><td>Govt</td><td>9495780483</td><td>Shibili</td><td>December</td></tr>
+<tr><td>23</td><td>Kasaragod</td><td>Green Woods Public School</td><td>Aided</td><td>8592844772</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>24</td><td>Kasaragod</td><td>KH Jama-Ath Higher Secondary School</td><td>Private</td><td>9645036696</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>25</td><td>Kasaragod</td><td>Municipal Welfare LP School</td><td>Govt</td><td>9746384142</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>26</td><td>Kasaragod</td><td>Muslim LP School</td><td>Govt</td><td>9497603174</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>27</td><td>Kasaragod</td><td>St.Peter&#x27;s ICSE School</td><td>Private</td><td>7012919232</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>28</td><td>Kasaragod</td><td>The Seed International School</td><td>Private</td><td>9562184821</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>29</td><td>Kasaragod</td><td>Yugpurush Narendra Modi Vidyalaya</td><td>Aided</td><td>9895532250</td><td>Emmanuel</td><td>November, December</td></tr>
+<tr><td>30</td><td>Kayyur</td><td>GLP School</td><td>Govt</td><td>9847482698</td><td>Emmanuel</td><td>December</td></tr>
+<tr><td>31</td><td>Kayyur</td><td>GVHSS High School</td><td>Govt</td><td>9847433576</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>32</td><td>Kayyur</td><td>GVHSS Kayyur VHSE</td><td>Govt</td><td>9048499096</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>33</td><td>Kodiyamma</td><td>GHS Kodiyamma School</td><td>Private</td><td>9847901698</td><td>Shibili</td><td>October, November</td></tr>
+<tr><td>34</td><td>Koliyadukkam</td><td>GUP School</td><td>Govt</td><td>9846320582</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>35</td><td>Kumbala</td><td>GHSS Kumbala High School</td><td>Govt</td><td>9961544486</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>36</td><td>Kumbala</td><td>GHSS Kumbala Higher Secondary School</td><td>Govt</td><td>8848310744</td><td>Emmanuel</td><td>October, November</td></tr>
+<tr><td>37</td><td>Kumbala</td><td>GSBS Kumbala School</td><td>Govt</td><td>9983040125</td><td>Shibili</td><td>November</td></tr>
+<tr><td>38</td><td>Kuniya</td><td>The Guardian English School</td><td>Private</td><td>8075470220</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>39</td><td>Kuttikkol</td><td>AUP School</td><td>Aided</td><td>9496831001</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>40</td><td>Madikai</td><td>GHSS (High School) Madikai</td><td>Govt</td><td>9447812904</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>41</td><td>Madikai</td><td>GVHSS (Higher Secondary) Madikai</td><td>Govt</td><td>9400364382</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>42</td><td>Manjeshwar</td><td>M S Global School</td><td>Private</td><td>9446326660</td><td>Shibili</td><td>October, November</td></tr>
+<tr><td>43</td><td>Melankott</td><td>UB Church ALP School</td><td>Aided</td><td>9947671482</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>44</td><td>Mogral</td><td>GVHSS Mogral High School</td><td>Govt</td><td>9746098819</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>45</td><td>Mogral</td><td>KS Abdulla Central School</td><td>Private</td><td>9895191509</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>46</td><td>Munnad</td><td>AUP School</td><td>Aided</td><td>9738060644</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>47</td><td>Munnad</td><td>GHS Munnad</td><td>Govt</td><td>9495905157</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>48</td><td>Neerchal</td><td>MSC High School Neerchal</td><td>Govt</td><td>8123833264</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>49</td><td>Neerchal</td><td>MSC Higher Secondary School Neerchal</td><td>Govt</td><td>9400740389</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>50</td><td>Nellikunnu</td><td>GVHSS Girls School (Higher Secondary)</td><td>Govt</td><td>9847142984</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>51</td><td>Paivalike</td><td>GHSS School</td><td>Govt</td><td>8921980164</td><td>Shibili</td><td>December, January</td></tr>
+<tr><td>52</td><td>Panarkkulam</td><td>BAHM ALP School</td><td>Private</td><td>9446271187</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>53</td><td>Perumbala</td><td>GLP School</td><td>Govt</td><td>9496140165</td><td>Emmanuel</td><td>December</td></tr>
+<tr><td>54</td><td>Poinachi</td><td>Bharath UP English Medium School</td><td>Aided</td><td>7306588753</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>55</td><td>Puthige</td><td>Junior Basic School</td><td>Aided</td><td>9446391810</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>56</td><td>Rajapuram</td><td>Holy Family HSS Rajapuram High School</td><td>Private</td><td>9074510960</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>57</td><td>Shiribagilu</td><td>MP International School</td><td>Aided</td><td>9920280780</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>58</td><td>Shiribagilu</td><td>MP International School</td><td>Private</td><td>9142256545</td><td>Shibili</td><td>October</td></tr>
+<tr><td>59</td><td>Shiribagilu</td><td>Welfare LP School</td><td>Govt</td><td>8606260588</td><td>Emmanuel</td><td>November</td></tr>
+<tr><td>60</td><td>Thalangara</td><td>GMVHSS Thalangara</td><td>Govt</td><td>9946533445</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>61</td><td>Thalangara</td><td>Madonna AUP School</td><td>Private</td><td>8078055605</td><td>Emmanuel</td><td>September</td></tr>
+<tr><td>62</td><td>Theruvath</td><td>GLP School</td><td>Govt</td><td>9446273159</td><td>Emmanuel</td><td>October</td></tr>
+<tr><td>63</td><td>Udma</td><td>GHSS Udma Higher Secondary</td><td>Govt</td><td>9947682327</td><td>Emmanuel</td><td>September</td></tr>
+</table></div>
+
+<h2>Schools not yet covered – first visit pending (48 entries, 43 unique)</h2>
+<div class="wrap"><table>
+<tr><th>#</th><th>Area</th><th>School</th><th>Type</th><th>Address</th><th>Contact</th></tr>
+<tr><td>1</td><td>Badoor</td><td>A. L. P. S. Badoor Padavu</td><td>Aided</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998245700 <span class="ll">landline</span></td></tr>
+<tr><td>2</td><td>Balla</td><td>Amrita Vidyalayam-Kanhangad</td><td>CBSE</td><td>Amritagiri, Kalyan Road, Balla P O, 671531</td><td>8078349462</td></tr>
+<tr><td>3</td><td>Balla</td><td>Christ CMI Public School (Balla)</td><td>CBSE</td><td>Balla P O, Kanhangad, Kasargod, 671531</td><td>8903767557</td></tr>
+<tr><td>4</td><td>Bela</td><td>St. B. A. S. B. S. Bela</td><td>Aided</td><td>Kasaragod block, Kasaragod Dt.</td><td>9562179145</td></tr>
+<tr><td>5</td><td>Chemnad</td><td>C.J. H.S.S. Chemnad</td><td>Aided</td><td>Kasaragod block, Kasaragod Dt.</td><td>04994237172 <span class="ll">landline</span></td></tr>
+<tr><td>6</td><td>Chithari</td><td>Azeeziya English Medium School</td><td>CBSE</td><td>North Chithari, Chithari PO, 671316</td><td>9995712124</td></tr>
+<tr><td>7</td><td>Ichlampady</td><td>A. S. B. S. Ichlampady</td><td>Aided</td><td>Manjeshwar block, Kasaragod Dt.</td><td>9446845067</td></tr>
+<tr><td>8</td><td>Kanhangad</td><td>Amrita Vidyalayam-Kanhangad <span class="dup">repeat</span></td><td>CBSE</td><td>Amritagiri, Kalyan Road, Balla P O, 671531</td><td>8078349462</td></tr>
+<tr><td>9</td><td>Kanhangad</td><td>Chinmaya Vidyalaya (Kanhangad)</td><td>CBSE</td><td>Athiyamboor, Kanhangad P.O, 671315</td><td>9497728284</td></tr>
+<tr><td>10</td><td>Kanhangad</td><td>Christ CMI Public School (Balla) <span class="dup">repeat</span></td><td>CBSE</td><td>Balla P O, Kanhangad, Kasargod, 671531</td><td>8903767557</td></tr>
+<tr><td>11</td><td>Kanhangad</td><td>Crescent English School (Ajanur)</td><td>CBSE</td><td>Ajanur Post, Kolavayal, Kanhangad, 671531</td><td>9847761514</td></tr>
+<tr><td>12</td><td>Kanhangad</td><td>Kendriya Vidyalaya (Kanhangad)</td><td>CBSE</td><td>Old Govt Hospital Building, Hosdurg, 671315</td><td>7349341807</td></tr>
+<tr><td>13</td><td>Kanhangad</td><td>St. Mary English Medium School</td><td>CBSE</td><td>Cherupanathady, Balanthode PO, 671532</td><td>9037626746</td></tr>
+<tr><td>14</td><td>Kanhangad</td><td>St. Mary&#x27;s English Medium School (Pallikere)</td><td>CBSE</td><td>Pallikere P.O, Hosdurg, 671316</td><td>9495586240</td></tr>
+<tr><td>15</td><td>Kanhangad</td><td>Stella Maris English Medium School</td><td>CBSE</td><td>Shanthigram, Padanakad P.O., 671328</td><td>9481506162</td></tr>
+<tr><td>16</td><td>Kanhangad</td><td>Swamy Nityananda English Medium School</td><td>CBSE</td><td>Kushal Nagar, Kanhangad, 671315</td><td>9946006725</td></tr>
+<tr><td>17</td><td>Kodiyamma</td><td>Kohinoor Public School</td><td>CBSE</td><td>Noor Nagar, Kodiyamma, Kumbla, 671321</td><td>9847390892</td></tr>
+<tr><td>18</td><td>Koliyadukkam</td><td>Apsara Public School</td><td>CBSE</td><td>Koliyadukkam, Perumbala PO, 671317</td><td>9745998865</td></tr>
+<tr><td>19</td><td>Kudlu</td><td>Chaithanya Vidyalaya</td><td>CBSE</td><td>Rishikshethra, Paichal, Kudlu Post, 671124</td><td>9447012016</td></tr>
+<tr><td>20</td><td>Kudlu</td><td>Kendriya Vidyalaya No. 1</td><td>CBSE</td><td>CPCRI, Kudlu Post, 671124</td><td>9401799466</td></tr>
+<tr><td>21</td><td>Kudlu</td><td>S. G. K. H. S. Kudlu</td><td>Aided</td><td>Kasaragod block, Kasaragod Dt.</td><td>9495745124</td></tr>
+<tr><td>22</td><td>Kumbala</td><td>C H Mohammed Koya Memorial School</td><td>CBSE</td><td>Hill Top, Seorambail, Kumbla, 671321</td><td>7994369005</td></tr>
+<tr><td>23</td><td>Kumbala</td><td>Essa English School</td><td>CBSE</td><td>Rajiv Nagar, Perwad P O, Mogral, 671321</td><td>9567298144</td></tr>
+<tr><td>24</td><td>Kumbala</td><td>M E S Kunil School</td><td>CBSE</td><td>Kunil Nagar, Muttom, Shiriya P.O., 671321</td><td>9447362282</td></tr>
+<tr><td>25</td><td>Kunjar</td><td>Z. I. A. L. P. S. Kunjar</td><td>Aided</td><td>Manjeshwar block, Kasaragod Dt.</td><td>9037240648</td></tr>
+<tr><td>26</td><td>Kuttikkol</td><td>Safa Public EMS Kuttikkol</td><td>Unaided Recognised</td><td>Karadka block, Kasaragod Dt.</td><td>04994207425 <span class="ll">landline</span></td></tr>
+<tr><td>27</td><td>Manjeshwar</td><td>Don Bosco Central School Manjeshwar</td><td>CBSE</td><td>Manjeshwar, Kasargod, 671323</td><td>8075227610</td></tr>
+<tr><td>28</td><td>Manjeshwar</td><td>G. H. S. S. Bangra Manjeshwar</td><td>Govt</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998272001 <span class="ll">landline</span></td></tr>
+<tr><td>29</td><td>Manjeshwar</td><td>Infant Jesus E. M. S. Manjeshwar</td><td>Unaided Recognised</td><td>Manjeshwar block, Kasaragod Dt.</td><td>7204531666</td></tr>
+<tr><td>30</td><td>Manjeshwar</td><td>Peace Public School Hosangadi</td><td>CBSE</td><td>Morthana, Kaliyoor, Vorkady, 671323</td><td>9400139660</td></tr>
+<tr><td>31</td><td>Manjeshwar</td><td>Posoat Jamath E. M. S. Manjeshwar</td><td>Unaided Recognised</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998274949 <span class="ll">landline</span></td></tr>
+<tr><td>32</td><td>Manjeshwar</td><td>Udaya E. M. H. S. S. Udayanagar Manjeshwar</td><td>Unaided Recognised</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998275680 <span class="ll">landline</span></td></tr>
+<tr><td>33</td><td>Mogral</td><td>Essa English School <span class="dup">repeat</span></td><td>CBSE</td><td>Rajiv Nagar, Perwad P O, Mogral, 671321</td><td>9567298144</td></tr>
+<tr><td>34</td><td>Mogral Puthur</td><td>Essa English School <span class="dup">repeat</span></td><td>CBSE</td><td>Rajiv Nagar, Perwad P O, Mogral, 671321</td><td>9567298144</td></tr>
+<tr><td>35</td><td>Naimarmoola</td><td>T. I. H. S. S. Naimarmoola</td><td>Aided</td><td>Kasaragod block, Kasaragod Dt.</td><td>04994255288 <span class="ll">landline</span></td></tr>
+<tr><td>36</td><td>Nellikkatta</td><td>P. B. M. E. H. S. S. Nellikkatta</td><td>Unaided Recognised</td><td>Kasaragod block, Kasaragod Dt.</td><td>9207857004</td></tr>
+<tr><td>37</td><td>Paivalike</td><td>G. H. S. S. Paivalike Nagar</td><td>Govt</td><td>Manjeshwar block, Kasaragod Dt.</td><td>6282525600</td></tr>
+<tr><td>38</td><td>Panayal</td><td>St. Mary&#x27;s English Medium School (Periyattadukkam)</td><td>CBSE</td><td>Periyattadukkam, Panayal PO, 671318</td><td>8289819220</td></tr>
+<tr><td>39</td><td>Perdala</td><td>Chinmaya Vidyalaya Badiadka</td><td>CBSE</td><td>Chinmaya Dham, Pajila P.O, Perdala, 671551</td><td>9645231005</td></tr>
+<tr><td>40</td><td>Perdala</td><td>Holy Family Convent Public School</td><td>CBSE</td><td>Badiadka, Perdala P.O., 671551</td><td>9496293239</td></tr>
+<tr><td>41</td><td>Perdala</td><td>N. H. S. Perdala</td><td>Aided</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998284680 <span class="ll">landline</span></td></tr>
+<tr><td>42</td><td>Puthige</td><td>A. J. B. S. Puthige</td><td>Aided</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998246200 <span class="ll">landline</span></td></tr>
+<tr><td>43</td><td>Shiribagilu</td><td>Jaimatha English Medium School</td><td>CBSE</td><td>Uliyathadka, Siribagilu PO, 671124</td><td>9447918104</td></tr>
+<tr><td>44</td><td>Shiribagilu</td><td>M P International School</td><td>CBSE</td><td>P O Siribagilu, Kasaragod, 671124</td><td>9495727307</td></tr>
+<tr><td>45</td><td>Shiriya</td><td>M E S Kunil School <span class="dup">repeat</span></td><td>CBSE</td><td>Kunil Nagar, Muttom, Shiriya P.O., 671321</td><td>9447362282</td></tr>
+<tr><td>46</td><td>Thalangara</td><td>Dhakeerath E.M. H. S. S. Thalangara</td><td>Unaided Recognised</td><td>Kasaragod(M), Kasaragod Dt.</td><td>9207222329</td></tr>
+<tr><td>47</td><td>Uppala</td><td>A. J. I. A. U. P. S. Uppala</td><td>Aided</td><td>Manjeshwar block, Kasaragod Dt.</td><td>04998242753 <span class="ll">landline</span></td></tr>
+<tr><td>48</td><td>Uppala</td><td>Sadguru Shri Nithyananda Vidyapeeta Kondevoor</td><td>CBSE</td><td>Uppala PO, Kasaragod, 671322</td><td>8089665589</td></tr>
+</table></div>
+</main></body></html>
