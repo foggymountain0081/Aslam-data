@@ -27,13 +27,21 @@ AREAS = [
     ("Tuneri",                100, 10, 3,  0, 93, 58, 3, 10, 0),
 ]
 
-rows = []
-for a, total, vis, notlist, fp, pend, pend_mob, second, vis_mob, passes in AREAS:
-    with_mob = vis_mob + fp + pend_mob          # every free-pass school has a mobile
-    without_mob = (vis - vis_mob) + (pend - pend_mob)
-    rows.append([a, total, vis, fp, pend, second, with_mob, without_mob, passes, vis - notlist])
 
-tot = [sum(r[i] for r in rows) for i in range(1, 10)]
+def area_rows(names=None):
+    """Table rows and totals for the given main areas (all areas when names is None)."""
+    rows = []
+    for a, total, vis, notlist, fp, pend, pend_mob, second, vis_mob, passes in AREAS:
+        if names is not None and a not in names:
+            continue
+        with_mob = vis_mob + fp + pend_mob          # every free-pass school has a mobile
+        without_mob = (vis - vis_mob) + (pend - pend_mob)
+        rows.append([a, total, vis, fp, pend, second, with_mob, without_mob, passes, vis - notlist])
+    tot = [sum(r[i] for r in rows) for i in range(1, 10)]
+    return rows, tot
+
+
+rows, tot = area_rows()
 T = dict(zip(["total", "visited", "fp", "pending", "second", "with_mob", "without_mob",
               "passes", "matched"], tot))
 assert T == dict(total=800, visited=152, fp=18, pending=656, second=74, with_mob=477,
@@ -57,16 +65,18 @@ HEAD = ["Main area", "Schools", "Covered (visited)", "Covered by free pass", "No
         "2nd visit fixed", "With mobile", "No mobile", "Free passes", "Matched with Deepika"]
 
 
-def build_html():
+def build_html(rows=rows, tot=tot, kpis=KPIS, months=MONTHS, name="Jayarajan_Summary_Report",
+               title="Jayarajan's Area Report - Summary", subtitle="Compared with Deepika's school list"):
     kpi = "\n".join(
         f'<div class="kpi"><div class="num">{v}</div><div class="lbl">{k}</div><div class="note">{n}</div></div>'
-        for k, v, n in KPIS)
+        for k, v, n in kpis)
+    month_total = sum(n for _, n in months)
     body = "\n".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows)
     foot = "<tr><td>TOTAL</td>" + "".join(f"<td>{c}</td>" for c in tot) + "</tr>"
-    months = "".join(f"<tr><td>{m}</td><td>{n}</td></tr>" for m, n in MONTHS)
+    month_rows = "".join(f"<tr><td>{m}</td><td>{n}</td></tr>" for m, n in months)
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jayarajan Area Report</title>
+<title>{title.replace(" - Summary", "")}</title>
 <style>
 :root {{ --bg:#f6f7f9; --card:#fff; --ink:#1d2433; --muted:#5b6475; --line:#dde1e8; --accent:#1f6feb; --head:#eef2f8; }}
 @media (prefers-color-scheme: dark) {{ :root {{ --bg:#11151c; --card:#1a2029; --ink:#e6e9ef; --muted:#9aa4b5; --line:#2c3440; --accent:#6ea8ff; --head:#222a35; }} }}
@@ -90,37 +100,38 @@ tr:last-child td {{ font-weight:700; border-bottom:0; }}
 .small {{ max-width:320px; }}
 footer {{ color:var(--muted); font-size:13px; margin-top:28px; }}
 </style></head><body><main>
-<h1>Jayarajan's Area Report - Summary</h1>
-<p class="sub">Kozhikode &middot; Visits 13.08.2026 - 24.09.2026 &middot; Compared with Deepika's school list</p>
+<h1>{title}</h1>
+<p class="sub">Kozhikode &middot; Visits 13.08.2026 - 24.09.2026 &middot; {subtitle}</p>
 <div class="grid">{kpi}</div>
 <h2>Area-wise breakdown</h2>
 <div class="wrap"><table><thead><tr>{''.join(f'<th>{h}</th>' for h in HEAD)}</tr></thead>
 <tbody>{body}{foot}</tbody></table></div>
 <h2>Second visits by month</h2>
 <div class="wrap small"><table><thead><tr><th>Month</th><th>Schools</th></tr></thead>
-<tbody>{months}<tr><td>Total fixed</td><td>74</td></tr></tbody></table></div>
+<tbody>{month_rows}<tr><td>Total fixed</td><td>{month_total}</td></tr></tbody></table></div>
 <footer>Source: Jayarajan_Data.pdf (Jayarajan's Area Report, 25.09.2026). "Covered by free pass" = schools covered by other executives, not counted as Jayarajan visits.
 "Matched with Deepika" counts visited schools found in Deepika's list.</footer>
 </main></body></html>"""
-    (OUT / "Jayarajan_Summary_Report.html").write_text(html, encoding="utf-8")
+    (OUT / f"{name}.html").write_text(html, encoding="utf-8")
 
 
-def build_pdf():
+def build_pdf(rows=rows, tot=tot, kpis=KPIS, months=MONTHS, name="Jayarajan_Summary_Report",
+              title="Jayarajan's Area Report - Summary", subtitle="Compared with Deepika's school list"):
     ss = getSampleStyleSheet()
     small = ParagraphStyle("small", parent=ss["Normal"], fontSize=8, leading=10, textColor=colors.HexColor("#5b6475"))
-    doc = SimpleDocTemplate(str(OUT / "Jayarajan_Summary_Report.pdf"), pagesize=landscape(A4),
+    doc = SimpleDocTemplate(str(OUT / f"{name}.pdf"), pagesize=landscape(A4),
                             leftMargin=14 * mm, rightMargin=14 * mm, topMargin=12 * mm, bottomMargin=12 * mm,
-                            title="Jayarajan Area Report - Summary")
+                            title=title)
     blue = colors.HexColor("#1f6feb")
     head = colors.HexColor("#eef2f8")
-    story = [Paragraph("Jayarajan's Area Report - Summary", ss["Title"]),
-             Paragraph("Kozhikode | Visits 13.08.2026 - 24.09.2026 | Compared with Deepika's school list", ss["Normal"]),
+    story = [Paragraph(title, ss["Title"]),
+             Paragraph(f"Kozhikode | Visits 13.08.2026 - 24.09.2026 | {subtitle}", ss["Normal"]),
              Spacer(1, 8)]
 
     cell = ParagraphStyle("cell", parent=ss["Normal"], fontSize=9, leading=11)
     kdata = [["Key figure", "Count", "Details"]] + [[Paragraph(f"<b>{k}</b>", cell),
                                                      Paragraph(f'<font size=13 color="#1f6feb"><b>{v}</b></font>', cell),
-                                                     Paragraph(n, cell)] for k, v, n in KPIS]
+                                                     Paragraph(n, cell)] for k, v, n in kpis]
     kt = Table(kdata, colWidths=[75 * mm, 22 * mm, 170 * mm])
     kt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), blue), ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
                             ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#dde1e8")),
@@ -139,7 +150,7 @@ def build_pdf():
                             ("BACKGROUND", (0, -1), (-1, -1), head)]))
     story += [KeepTogether([Paragraph("Area-wise breakdown", ss["Heading2"]), at]), Spacer(1, 10)]
 
-    mt = Table([["Month", "Schools"]] + [[m, n] for m, n in MONTHS] + [["Total fixed", 74]], colWidths=[40 * mm, 25 * mm], hAlign="LEFT")
+    mt = Table([["Month", "Schools"]] + [[m, n] for m, n in months] + [["Total fixed", sum(n for _, n in months)]], colWidths=[40 * mm, 25 * mm], hAlign="LEFT")
     mt.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, 0), head), ("ALIGN", (1, 0), (1, -1), "RIGHT"),
                             ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#dde1e8")),
                             ("FONTNAME", (0, -1), (-1, -1), "Helvetica-Bold")]))
