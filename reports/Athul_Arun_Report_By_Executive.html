@@ -29,6 +29,7 @@
   tr.total td { font-weight:700; border-top:2px solid var(--ink); }
   tr.sub td { color:var(--muted); font-size:13px; padding-top:4px; padding-bottom:4px; }
   tr.key td { font-weight:600; }
+  .pH { color:#1f8a4c; font-weight:600; } .pM { color:#c46a10; font-weight:600; } .pL { color:#c0392b; font-weight:600; }
   .note { font-size:12.5px; color:var(--muted); }
   ul.note { padding-left:18px; margin:6px 0; }
   @media (max-width:700px) { .cards { grid-template-columns:1fr; } table { font-size:13px; } th, td { padding:6px; } }
@@ -48,18 +49,21 @@
     <div class="row"><span>Covered</span><b>253</b></div>
     <div class="row"><span>Not yet covered</span><b>160</b></div>
     <div class="row"><span>Free passes</span><b>4</b></div>
+    <div class="row"><span>Confirmation probability</span><b>24.7%</b></div>
   </div>
   <div class="card r"><h3>Arun</h3>
     <div class="row"><span>Schools in areas</span><b>680</b></div>
     <div class="row"><span>Covered</span><b>299</b></div>
     <div class="row"><span>Not yet covered</span><b>381</b></div>
     <div class="row"><span>Free passes</span><b>7</b></div>
+    <div class="row"><span>Confirmation probability</span><b>21.5%</b></div>
   </div>
   <div class="card"><h3>Athul + Arun total</h3>
     <div class="row"><span>Schools in their areas</span><b>1,117</b></div>
     <div class="row"><span>Covered</span><b>552</b></div>
     <div class="row"><span>Not yet covered</span><b>565</b></div>
     <div class="row"><span>Free passes</span><b>11</b></div>
+    <div class="row"><span>Confirmation probability</span><b>23.0%</b></div>
   </div>
 </div>
 
@@ -77,6 +81,8 @@
   <tr class="key"><td>Total schools not having a contact mobile number</td><td class="num">95</td><td class="num">150</td><td class="num">15</td><td class="num">260</td></tr>
   <tr class="key"><td>Total free passes issued</td><td class="num">4</td><td class="num">7</td><td class="num">–</td><td class="num">11</td></tr>
   <tr class="sub"><td>&nbsp;&nbsp;– persons who visited on these passes</td><td class="num">10</td><td class="num">33</td><td class="num">–</td><td class="num">43</td></tr>
+  <tr class="key"><td>Estimated confirmation probability (covered schools)</td><td class="num">24.7%</td><td class="num">21.5%</td><td class="num">–</td><td class="num">23.0%</td></tr>
+  <tr class="sub"><td>&nbsp;&nbsp;– expected tour confirmations</td><td class="num">≈ 63</td><td class="num">≈ 64</td><td class="num">–</td><td class="num">≈ 127</td></tr>
 </table>
 <p class="note">* 5 areas were visited by both Athul and Arun (Chalavara, Edathanattukara, Koduvayur, Mannarkkad, Muthalamada). Schools they covered there are counted under whoever visited them (Athul 27, Arun 13). The 24 schools not yet visited in those areas are shown separately so nothing is counted twice.</p>
 
@@ -94,23 +100,36 @@
 
 <h2>3. Free passes issued by Athul &amp; Arun</h2>
 <table>
-  <tr><th>Date</th><th>School</th><th>Executive</th><th class="num">Persons</th></tr>
-  <tr><td>16/08/2026</td><td>Govt. LP School Pazhayagramam, Nemmara</td><td>Athul</td><td class="num">3</td></tr>
-  <tr><td>05/09/2026</td><td>A L P School, Palakkad</td><td>Athul</td><td class="num">2</td></tr>
-  <tr><td>20/09/2026</td><td>GUPS Killimangalam</td><td>Athul</td><td class="num">1</td></tr>
-  <tr><td>21/09/2026</td><td>Mary Matha HS, Panthalampadam</td><td>Athul</td><td class="num">4</td></tr>
-  <tr><td>06/09/2026</td><td>A L P S Kozhikkottiri</td><td>Arun</td><td class="num">5</td></tr>
-  <tr><td>13/09/2026</td><td>Holy Family School, Ponnamkode</td><td>Arun</td><td class="num">4</td></tr>
-  <tr><td>16/09/2026</td><td>S.N.G.L.P. School</td><td>Arun</td><td class="num">4</td></tr>
-  <tr><td>17/09/2026</td><td>CEUP School Paruthoor, Palakkad</td><td>Arun</td><td class="num">5</td></tr>
-  <tr><td>20/09/2026</td><td>GLP School Cherukkodu</td><td>Arun</td><td class="num">4</td></tr>
-  <tr><td>21/09/2026</td><td>HSS Mundur, Palakkad</td><td>Arun</td><td class="num">4</td></tr>
-  <tr><td>25/09/2026</td><td>GLPS Kappadam, Palakkad</td><td>Arun</td><td class="num">7</td></tr>
-  <tr class="total"><td colspan="2">Total – Athul 4, Arun 7</td><td>11 passes</td><td class="num">43</td></tr>
+  <tr><th>Date</th><th>School</th><th>Executive</th><th class="num">Persons</th><th>Feedback</th><th>Confirmation</th></tr>
+  <tr><td>16/08/2026</td><td>Govt. LP School Pazhayagramam, Nemmara</td><td>Athul</td><td class="num">3</td><td>Interested – tour plan January, LP ~55 students</td><td class="pH">High</td></tr>
+  <tr><td>05/09/2026</td><td>A L P School, Palakkad</td><td>Athul</td><td class="num">2</td><td>Neutral</td><td class="pM">Medium</td></tr>
+  <tr><td>20/09/2026</td><td>GUPS Killimangalam</td><td>Athul</td><td class="num">1</td><td>Feedback not yet taken</td><td class="pM">Medium</td></tr>
+  <tr><td>21/09/2026</td><td>Mary Matha HS, Panthalampadam</td><td>Athul</td><td class="num">4</td><td>Feedback not yet taken</td><td class="pM">Medium</td></tr>
+  <tr><td>06/09/2026</td><td>A L P S Kozhikkottiri</td><td>Arun</td><td class="num">5</td><td>Neutral</td><td class="pM">Medium</td></tr>
+  <tr><td>13/09/2026</td><td>Holy Family School, Ponnamkode</td><td>Arun</td><td class="num">4</td><td>Interested – tour in November</td><td class="pH">High</td></tr>
+  <tr><td>16/09/2026</td><td>S.N.G.L.P. School</td><td>Arun</td><td class="num">4</td><td>Interested for group visit</td><td class="pH">High</td></tr>
+  <tr><td>17/09/2026</td><td>CEUP School Paruthoor, Palakkad</td><td>Arun</td><td class="num">5</td><td>Feedback not yet taken</td><td class="pM">Medium</td></tr>
+  <tr><td>20/09/2026</td><td>GLP School Cherukkodu</td><td>Arun</td><td class="num">4</td><td>Feedback not yet taken</td><td class="pM">Medium</td></tr>
+  <tr><td>21/09/2026</td><td>HSS Mundur, Palakkad</td><td>Arun</td><td class="num">4</td><td>Feedback not yet taken</td><td class="pM">Medium</td></tr>
+  <tr><td>25/09/2026</td><td>GLPS Kappadam, Palakkad</td><td>Arun</td><td class="num">7</td><td>Feedback not yet taken</td><td class="pM">Medium</td></tr>
+  <tr class="total"><td colspan="2">Total – Athul 4, Arun 7</td><td>11 passes</td><td class="num">43</td><td></td><td>High 3 · Medium 8</td></tr>
 </table>
-<p class="note">Two more free passes have no executive name, but their phone numbers match schools in the covered list: V R U P S Muthukurussi (Arun’s school, 4 persons) and G.H.S.S. Muthalamada (Athul’s school, 4 persons). Counting these too gives Athul 5, Arun 8 (13 in total). The register has 104 free passes across all executives.</p>
+<p class="note">Two more free passes have no executive name, but their phone numbers match schools in the covered list: V R U P S Muthukurussi (Arun’s school, 4 persons) and G.H.S.S. Muthalamada (Athul’s school, 4 persons). Their confirmation is High (Muthukurussi: interested, tour time November, UP ~60 students) and Medium (Muthalamada: neutral, but tour planned for October after Kalamela, ~1,250 students). Counting these too gives Athul 5, Arun 8 (13 in total). The register has 104 free passes across all executives.</p>
 
-<h2>4. Notes</h2>
+<h2>4. Confirmation probability</h2>
+<p class="note" style="margin-top:0">Each covered school is given a level based on what the two files show about it. The percentage uses these assumed chances: High = 70%, Medium = 40%, Low = 10%.</p>
+<table>
+  <tr><th>Level</th><th>Rule used</th><th class="num a">Athul</th><th class="num r">Arun</th><th class="num">Total</th></tr>
+  <tr><td class="pH">High (70%)</td><td>Took a free pass and said they are interested in a group visit or gave a tour month</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+  <tr><td class="pM">Medium (40%)</td><td>Follow-up month fixed, or took a free pass (neutral / feedback pending)</td><td class="num">122</td><td class="num">111</td><td class="num">233</td></tr>
+  <tr><td class="pL">Low (10%)</td><td>Covered, but no follow-up month and no free pass</td><td class="num">130</td><td class="num">186</td><td class="num">316</td></tr>
+  <tr class="total"><td colspan="2">Covered schools</td><td class="num">253</td><td class="num">299</td><td class="num">552</td></tr>
+  <tr class="key"><td colspan="2">Expected tour confirmations</td><td class="num">≈ 63</td><td class="num">≈ 64</td><td class="num">≈ 127</td></tr>
+  <tr class="key"><td colspan="2">Estimated confirmation probability</td><td class="num">24.7%</td><td class="num">21.5%</td><td class="num">23.0%</td></tr>
+</table>
+<p class="note">This is an estimate, not a record of confirmed bookings. The 70/40/10% weights are assumptions, and they can be changed once real confirmation numbers are available. The 565 not-yet-covered schools are not included, because no visit has been made there yet.</p>
+
+<h2>5. Notes</h2>
 <ul class="note">
   <li>School counts come from the 222 area sections of the school report. The totals match the report’s own cover page (552 covered and 565 pending).</li>
   <li>The report lists every covered school under “Second Visit”, so second visits = schools covered.</li>
