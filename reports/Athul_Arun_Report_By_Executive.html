@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Athul &amp; Arun Report</title>
+<style>
+  :root { --ink:#1d2433; --muted:#5d6678; --line:#dde2ea; --bg:#ffffff; --soft:#f4f6f9;
+          --athul:#2458c6; --arun:#1f8a4c; --tot:#1d2433; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:15px/1.5 "Segoe UI", Arial, Helvetica, sans-serif; }
+  .wrap { max-width:900px; margin:0 auto; padding:28px 16px 40px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  h2 { font-size:17px; margin:28px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  .sub { color:var(--muted); font-size:13px; margin:0; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:20px; }
+  .card { border:1px solid var(--line); border-radius:8px; padding:12px 14px; background:var(--soft);
+          border-top:4px solid var(--tot); break-inside:avoid; }
+  .card.a { border-top-color:var(--athul); } .card.r { border-top-color:var(--arun); }
+  .card h3 { margin:0 0 6px; font-size:15px; }
+  .card .row { display:flex; justify-content:space-between; font-size:13.5px; padding:2px 0; }
+  .card .row b { font-variant-numeric:tabular-nums; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin-top:6px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:var(--soft); font-weight:600; }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  th.a { color:var(--athul); } th.r { color:var(--arun); }
+  tr.total td { font-weight:700; border-top:2px solid var(--ink); }
+  tr.sub td { color:var(--muted); font-size:13px; padding-top:4px; padding-bottom:4px; }
+  tr.key td { font-weight:600; }
+  .note { font-size:12.5px; color:var(--muted); }
+  ul.note { padding-left:18px; margin:6px 0; }
+  @media (max-width:700px) { .cards { grid-template-columns:1fr; } table { font-size:13px; } th, td { padding:6px; } }
+  @media print { .wrap { padding:0; } h2 { break-after:avoid; } table, .card { break-inside:avoid; } }
+  @page { size:A4; margin:14mm; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Athul &amp; Arun – Palakkad School Report (by executive)</h1>
+<p class="sub">Sources: <b>Arun and Athul Palakkad School Report</b> (86 pages, generated 21 Sep 2026) and the <b>Free Pass register</b> (18 Jul – 26 Sep 2026). Prepared 27 Sep 2026.</p>
+
+<div class="cards">
+  <div class="card a"><h3>Athul</h3>
+    <div class="row"><span>Schools in areas</span><b>413</b></div>
+    <div class="row"><span>Covered</span><b>253</b></div>
+    <div class="row"><span>Not yet covered</span><b>160</b></div>
+    <div class="row"><span>Free passes</span><b>4</b></div>
+  </div>
+  <div class="card r"><h3>Arun</h3>
+    <div class="row"><span>Schools in areas</span><b>680</b></div>
+    <div class="row"><span>Covered</span><b>299</b></div>
+    <div class="row"><span>Not yet covered</span><b>381</b></div>
+    <div class="row"><span>Free passes</span><b>7</b></div>
+  </div>
+  <div class="card"><h3>Athul + Arun total</h3>
+    <div class="row"><span>Schools in their areas</span><b>1,117</b></div>
+    <div class="row"><span>Covered</span><b>552</b></div>
+    <div class="row"><span>Not yet covered</span><b>565</b></div>
+    <div class="row"><span>Free passes</span><b>11</b></div>
+  </div>
+</div>
+
+<h2>1. Final summary</h2>
+<table>
+  <tr><th>Item</th><th class="num a">Athul</th><th class="num r">Arun</th><th class="num">Shared areas*</th><th class="num">Total</th></tr>
+  <tr><td>Areas visited</td><td class="num">68</td><td class="num">149</td><td class="num">5</td><td class="num">222</td></tr>
+  <tr class="key"><td>Total number of schools in the areas</td><td class="num">413</td><td class="num">680</td><td class="num">24</td><td class="num">1,117</td></tr>
+  <tr class="key"><td>Total schools covered</td><td class="num">253</td><td class="num">299</td><td class="num">–</td><td class="num">552</td></tr>
+  <tr class="key"><td>Total schools not yet covered</td><td class="num">160</td><td class="num">381</td><td class="num">24</td><td class="num">565</td></tr>
+  <tr class="key"><td>Total second visits due</td><td class="num">253</td><td class="num">299</td><td class="num">–</td><td class="num">552</td></tr>
+  <tr class="sub"><td>&nbsp;&nbsp;– follow-up month fixed</td><td class="num">121</td><td class="num">110</td><td class="num">–</td><td class="num">231</td></tr>
+  <tr class="sub"><td>&nbsp;&nbsp;– follow-up month not fixed</td><td class="num">132</td><td class="num">189</td><td class="num">–</td><td class="num">321</td></tr>
+  <tr class="key"><td>Total schools having a contact mobile number</td><td class="num">318</td><td class="num">530</td><td class="num">9</td><td class="num">857</td></tr>
+  <tr class="key"><td>Total schools not having a contact mobile number</td><td class="num">95</td><td class="num">150</td><td class="num">15</td><td class="num">260</td></tr>
+  <tr class="key"><td>Total free passes issued</td><td class="num">4</td><td class="num">7</td><td class="num">–</td><td class="num">11</td></tr>
+  <tr class="sub"><td>&nbsp;&nbsp;– persons who visited on these passes</td><td class="num">10</td><td class="num">33</td><td class="num">–</td><td class="num">43</td></tr>
+</table>
+<p class="note">* 5 areas were visited by both Athul and Arun (Chalavara, Edathanattukara, Koduvayur, Mannarkkad, Muthalamada). Schools they covered there are counted under whoever visited them (Athul 27, Arun 13). The 24 schools not yet visited in those areas are shown separately so nothing is counted twice.</p>
+
+<h2>2. Mobile numbers in detail</h2>
+<table>
+  <tr><th>Group</th><th class="num a">Athul</th><th class="num r">Arun</th><th class="num">Shared areas</th><th class="num">Total</th></tr>
+  <tr><td>Covered schools – with mobile</td><td class="num">240</td><td class="num">295</td><td class="num">–</td><td class="num">535</td></tr>
+  <tr><td>Covered schools – without mobile</td><td class="num">13</td><td class="num">4</td><td class="num">–</td><td class="num">17</td></tr>
+  <tr><td>Not yet covered – with mobile</td><td class="num">78</td><td class="num">235</td><td class="num">9</td><td class="num">322</td></tr>
+  <tr><td>Not yet covered – without mobile</td><td class="num">82</td><td class="num">146</td><td class="num">15</td><td class="num">243</td></tr>
+  <tr class="total"><td>With mobile number</td><td class="num">318</td><td class="num">530</td><td class="num">9</td><td class="num">857</td></tr>
+  <tr class="total" style="border-top:0"><td>Without mobile number</td><td class="num">95</td><td class="num">150</td><td class="num">15</td><td class="num">260</td></tr>
+</table>
+<p class="note">A mobile number means a 10-digit number starting with 6, 7, 8 or 9. “Without mobile” includes schools with only a landline (234) and schools with no number at all (26).</p>
+
+<h2>3. Free passes issued by Athul &amp; Arun</h2>
+<table>
+  <tr><th>Date</th><th>School</th><th>Executive</th><th class="num">Persons</th></tr>
+  <tr><td>16/08/2026</td><td>Govt. LP School Pazhayagramam, Nemmara</td><td>Athul</td><td class="num">3</td></tr>
+  <tr><td>05/09/2026</td><td>A L P School, Palakkad</td><td>Athul</td><td class="num">2</td></tr>
+  <tr><td>20/09/2026</td><td>GUPS Killimangalam</td><td>Athul</td><td class="num">1</td></tr>
+  <tr><td>21/09/2026</td><td>Mary Matha HS, Panthalampadam</td><td>Athul</td><td class="num">4</td></tr>
+  <tr><td>06/09/2026</td><td>A L P S Kozhikkottiri</td><td>Arun</td><td class="num">5</td></tr>
+  <tr><td>13/09/2026</td><td>Holy Family School, Ponnamkode</td><td>Arun</td><td class="num">4</td></tr>
+  <tr><td>16/09/2026</td><td>S.N.G.L.P. School</td><td>Arun</td><td class="num">4</td></tr>
+  <tr><td>17/09/2026</td><td>CEUP School Paruthoor, Palakkad</td><td>Arun</td><td class="num">5</td></tr>
+  <tr><td>20/09/2026</td><td>GLP School Cherukkodu</td><td>Arun</td><td class="num">4</td></tr>
+  <tr><td>21/09/2026</td><td>HSS Mundur, Palakkad</td><td>Arun</td><td class="num">4</td></tr>
+  <tr><td>25/09/2026</td><td>GLPS Kappadam, Palakkad</td><td>Arun</td><td class="num">7</td></tr>
+  <tr class="total"><td colspan="2">Total – Athul 4, Arun 7</td><td>11 passes</td><td class="num">43</td></tr>
+</table>
+<p class="note">Two more free passes have no executive name, but their phone numbers match schools in the covered list: V R U P S Muthukurussi (Arun’s school, 4 persons) and G.H.S.S. Muthalamada (Athul’s school, 4 persons). Counting these too gives Athul 5, Arun 8 (13 in total). The register has 104 free passes across all executives.</p>
+
+<h2>4. Notes</h2>
+<ul class="note">
+  <li>School counts come from the 222 area sections of the school report. The totals match the report’s own cover page (552 covered and 565 pending).</li>
+  <li>The report lists every covered school under “Second Visit”, so second visits = schools covered.</li>
+  <li>Areas are assigned to the executive who covered schools there. A not-yet-covered school counts under Athul or Arun based on its area.</li>
+  <li>Some schools appear twice under different contact persons (for example G.V.H.S.S. Alanallur). They are counted as the report lists them.</li>
+</ul>
+
+</div>
+</body>
+</html>
